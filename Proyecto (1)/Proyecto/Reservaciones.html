@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Cita</title>
+  <style>
+        body {
+            font-family: Garamond, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3d4ea;
+        }
+        form {
+            background-color: #da8bbf;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    header {
+            background-color: #e25dd7;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+    }
+    nav {
+            background-color: #fab4d1;
+            color: #fdfcfc;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #0e0d0d;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    input[type="submit"] {
+      background-color: #e25dd7;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+
+
+    }
+    input[type="submit" ]:hover {
+      background-color: #e25dd7;
+      text-align: center;
+
+
+    }
+  </style>
+</head>
+<body>
+<form action="procesar_reserva.php" method="POST">
+<header>    <h1>Reservaciones</h1></header>
+<nav>
+    <a href="inicio.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="Reservaciones.html">Reservar</a>
+</nav>
+
+<form action="procesar_cita.php" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  
+  <label for="email">Correo electrónico:</label>
+  <input  type="email" id="email" name="email" required>
+  
+  <label for="fecha">Fecha de la cita:</label>
+  <input class="text-align-center" type="date" id="fecha" name="fecha" required>
+
+  <label for="manicureService">Elige un servicio:</label>
+  <select id="manicureService" name="manicureService">
+      <option value="">Seleccionar</option>
+      <option value="manicuraClasica">Manicura básica</option>
+      <option value="manicuraFrancesa">Manicura francesa</option>
+      <option value="manicuraAcrilica">Manicura de spa</option>
+      <option value="manicuraShellac">Manicura de gel</option>
+  </select>
+
+  <label for="hora">Selecciona una hora:</label>
+  <input type="time" id="hora" name="hora">
+  
+  <label for="mensaje">Mensaje adicional:</label>
+  <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+  
+  <input type="submit" value="Reservar Cita">
+</form>
+
+</body>
+</html>
